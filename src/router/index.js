@@ -1,86 +1,85 @@
-import { createRouter, createWebHistory } from "vue-router";
-import About from "@/views/About.vue";
-import EventList from "@/views/EventList.vue";
-import EventLayout from "@/views/event/Layout.vue";
-import EventDetails from "@/views/event/Details.vue";
-import EventRegister from "@/views/event/Register.vue";
-import EventEdit from "@/views/event/Edit.vue";
-import NotFound from "@/views/NotFound.vue";
-import NetworkError from "@/views/NetworkError.vue";
+import { createRouter, createWebHistory } from 'vue-router'
+import About from '@/views/About.vue'
+import EventList from '@/views/EventList.vue'
+import EventLayout from '@/views/ramen/Layout.vue'
+import RamenDetails from '@/views/ramen/Details.vue'
+import EventRegister from '@/views/ramen/Register.vue'
+import EventEdit from '@/views/ramen/Edit.vue'
+import NotFound from '@/views/NotFound.vue'
+import NetworkError from '@/views/NetworkError.vue'
 
 const routes = [
   {
-    path: "/",
-    name: "EventList",
+    path: '/',
+    name: 'EventList',
     component: EventList,
-    props: (route) => ({ page: parseInt(route.query.page) || 1 }),
   },
   {
-    path: "/redirectroutes/:id",
-    name: "EventLayout",
+    path: '/redirectroutes/:id',
+    name: 'EventLayout',
     props: true,
     component: EventLayout,
     children: [
       {
-        path: "",
-        name: "EventDetails",
-        component: EventDetails,
+        path: '',
+        name: 'RamenDetails',
+        component: RamenDetails,
       },
       {
-        path: "register",
-        name: "EventRegister",
+        path: 'register',
+        name: 'EventRegister',
         component: EventRegister,
       },
       {
-        path: "edit",
-        name: "EventEdit",
+        path: 'edit',
+        name: 'EventEdit',
         component: EventEdit,
       },
     ],
   },
   {
-    path: "/event/:afterEvent(.*)",
+    path: '/event/:afterEvent(.*)',
     redirect: (to) => {
-      return { path: "/events/" + to.params.afterEvent };
+      return { path: '/ramen/' + to.params.afterEvent }
     },
   },
   {
-    path: "/about-us",
-    name: "About",
+    path: '/about-us',
+    name: 'About',
     component: About,
   },
   {
-    path: "/about",
-    redirect: { name: "about" },
+    path: '/about',
+    redirect: { name: 'about' },
   },
   {
-    path: "/:catchAll(.*)",
-    name: "NotFound",
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
     component: NotFound,
   },
   {
-    path: "/404/:resource",
-    name: "404Resource",
+    path: '/404/:resource',
+    name: '404Resource',
     component: NotFound,
     props: true,
   },
   {
-    path: "/network-error",
-    name: "NetworkError",
+    path: '/network-error',
+    name: 'NetworkError',
     component: NetworkError,
   },
-];
+]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
-      return savedPosition;
+      return savedPosition
     } else {
-      return { top: 0 };
+      return { top: 0 }
     }
   },
-});
+})
 
-export default router;
+export default router

@@ -1,8 +1,13 @@
 <template>
-  <router-link :to="{ name: 'EventDetails', params: { id: event.id } }">
-    <div class="event-card">
-      <span> @ {{ event.time }} on {{ event.date }}</span>
-      <h2>{{ event.title }}</h2>
+  <router-link :to="{ name: 'RamenDetails', params: { id: ramen.id } }">
+    <div class="ramen-grid">
+      <img :src="ramen.url" :alt="ramen.name" />
+      <span>{{ ramen.name }}</span>
+      <span>flavour: {{ ramen.flavour }}</span>
+      <span>noodels: {{ ramen.noodels }}</span>
+      <span>soupe: {{ ramen.soupe }}</span>
+      <span>spice: {{ ramen.spice }}</span>
+      <p>comment: {{ ramen.comment }}</p>
     </div>
   </router-link>
 </template>
@@ -11,17 +16,15 @@
 export default {
   name: 'EventCard',
   props: {
-    event: Object,
+    ramen: Object,
   },
 }
 </script>
 
 <style scoped>
-.event-card {
-  padding: 20px;
-  width: 250px;
-  cursor: pointer;
-  border: 1px solid #39495c;
-  margin-bottom: 18px;
+.ramen-grid {
+  display: grid;
+  grid-auto-flow: row dense;
+  gap: 10%;
 }
 </style>

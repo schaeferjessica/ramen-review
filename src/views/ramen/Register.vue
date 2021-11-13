@@ -1,17 +1,17 @@
 <template>
-  <p>Register for the event here</p>
+  <p>Register for the ramen here</p>
   <button @click="register">Register me</button>
 </template>
 <script>
 export default {
-  props: ['event'],
+  props: ['ramen'],
   inject: ['GlobalStore'], // <---- Inject the Global Store
   methods: {
     register() {
       // Assuming successful API call to register them
 
       this.GlobalStore.flashMessage =
-        'You are successfully registered for ' + this.event.title
+        'You are successfully registered for ' + this.ramen.title
       setTimeout(() => {
         // After 3 seconds remove it
         this.GlobalStore.flashMessage = ''
@@ -19,7 +19,7 @@ export default {
 
       // If registration API call is successful
       this.$router.push({
-        name: 'EventDetails',
+        name: 'RamenDetails',
       })
     },
   },

@@ -10,10 +10,10 @@ const apiClient = axios.create({
 })
 
 export default {
-  getEvents(perPage, page) {
-    return apiClient.get('/events?_limit=' + perPage + '&_page=' + page)
+  getEvents() {
+    return apiClient.get('/ramen')
   },
   getEvent(id) {
-    return apiClient.get('/events/' + id)
+    return apiClient.get('/ramen/' + id)
   },
 }
