@@ -13,7 +13,7 @@ import RamenService from '@/services/RamenService.js'
 import { watchEffect } from 'vue'
 
 export default {
-  name: 'RamenList',
+  name: 'RamenReviews',
   components: {
     RamenPack,
   },
@@ -49,11 +49,11 @@ export default {
 .ramen__grid {
   display: grid;
   grid-auto-flow: dense;
-  grid-row-gap: 3%;
+  grid-row-gap: 50px;
   grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 10%;
   margin: 0;
-  padding: 0;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 </style>

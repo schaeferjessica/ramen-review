@@ -9,7 +9,7 @@
       <span>noodels: {{ ramen.noodels }}</span>
       <span>soupe: {{ ramen.soupe }}</span>
       <span>spice: {{ ramen.spice }}</span>
-      <span v-if="ramen.comment">comment: {{ ramen.comment }}</span>
+      <small v-if="ramen.comment">comment: {{ ramen.comment }}</small>
     </div>
   </li>
 </template>
@@ -36,8 +36,18 @@ export default {
 .ramen__image {
   width: 100%;
 }
+.ramen__context {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
 .ramen__context > span {
   display: block;
+  text-align: left;
+}
+.ramen__context > small {
+  margin-top: 5px;
+  font-size: 14px;
   text-align: left;
 }
 </style>

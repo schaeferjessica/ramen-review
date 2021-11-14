@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import About from '@/views/About.vue'
-import RamenList from '@/views/RamenList.vue'
+import Impressum from '@/views/Impressum.vue'
+import RamenReviews from '@/views/RamenReviews.vue'
 import EventLayout from '@/views/ramen/Layout.vue'
 import RamenDetails from '@/views/ramen/Details.vue'
 import EventRegister from '@/views/ramen/Register.vue'
@@ -11,8 +11,8 @@ import NetworkError from '@/views/NetworkError.vue'
 const routes = [
   {
     path: '/',
-    name: 'RamenList',
-    component: RamenList,
+    name: 'RamenReviews',
+    component: RamenReviews,
   },
   {
     path: '/redirectroutes/:id',
@@ -44,13 +44,13 @@ const routes = [
     },
   },
   {
-    path: '/about-us',
-    name: 'About',
-    component: About,
+    path: '/impressum-staff',
+    name: 'Impressum',
+    component: Impressum,
   },
   {
-    path: '/about',
-    redirect: { name: 'about' },
+    path: '/impressum',
+    redirect: { name: 'Impressum' },
   },
   {
     path: '/:catchAll(.*)',

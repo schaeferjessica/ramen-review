@@ -1,12 +1,14 @@
 <template>
-  <div id="nav" class="navigation">
-    <div id="flashMessage" v-if="GlobalStore.flashMessage">
-      {{ GlobalStore.flashMessage }}
-    </div>
-    <router-link :to="{ name: 'RamenList' }">RamenList</router-link> |
-    <router-link :to="{ name: 'About' }">About</router-link>
-  </div>
+  <nav id="nav" class="navigation">
+    <router-link :to="{ name: 'RamenReviews' }">RamenReviews</router-link>
+  </nav>
+
   <router-view />
+
+  <footer class="footer">
+    <p>Ramen Reviews by <a href="https://jessica.gatsbyjs.io/">Jessica</a></p>
+    <router-link :to="{ name: 'Impressum' }">Impressum</router-link>
+  </footer>
 </template>
 
 <script>
@@ -20,7 +22,6 @@ export default {
   font-family: 'Krub', sans-serif, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #3d3832;
 }
 
@@ -30,6 +31,7 @@ export default {
 
 body {
   margin: 0;
+  font-size: 20px;
 }
 
 a,
@@ -42,21 +44,8 @@ ul {
   list-style: none;
 }
 
-@keyframes yellowfade {
-  from {
-    background: yellow;
-  }
-  to {
-    background: transparent;
-  }
-}
-
-.navigation {
-  text-align: right;
-}
-
-#flashMessage {
-  animation-name: yellowfade;
-  animation-duration: 3s;
+.footer {
+  display: flex;
+  justify-content: space-between;
 }
 </style>
