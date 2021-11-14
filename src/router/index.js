@@ -3,8 +3,7 @@ import Impressum from '@/views/Impressum.vue'
 import RamenReviews from '@/views/RamenReviews.vue'
 import EventLayout from '@/views/ramen/Layout.vue'
 import RamenDetails from '@/views/ramen/Details.vue'
-import EventRegister from '@/views/ramen/Register.vue'
-import EventEdit from '@/views/ramen/Edit.vue'
+import RamenLink from '@/views/ramen/RamenLink.vue'
 import NotFound from '@/views/NotFound.vue'
 import NetworkError from '@/views/NetworkError.vue'
 
@@ -26,14 +25,9 @@ const routes = [
         component: RamenDetails,
       },
       {
-        path: 'register',
-        name: 'EventRegister',
-        component: EventRegister,
-      },
-      {
-        path: 'edit',
-        name: 'EventEdit',
-        component: EventEdit,
+        path: 'link',
+        name: 'RamenLink',
+        component: RamenLink,
       },
     ],
   },

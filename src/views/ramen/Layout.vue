@@ -1,13 +1,8 @@
 <template>
-  <div v-if="ramen">
-    <h1>{{ ramen.name }}</h1>
-    <div id="nav">
-      <router-link :to="{ name: 'RamenDetails' }">Details</router-link>
-      |
-      <router-link :to="{ name: 'EventRegister' }">Register</router-link>
-      |
-      <router-link :to="{ name: 'EventEdit' }">Edit</router-link>
-    </div>
+  <div v-if="ramen" class="ramen__layout">
+    <!-- <div id="nav">
+      <router-link :to="{ name: 'RamenLink' }">Link</router-link>
+    </div> -->
     <router-view :ramen="ramen" />
   </div>
 </template>
@@ -40,3 +35,13 @@ export default {
   },
 }
 </script>
+<style scoped>
+.ramen__layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+</style>

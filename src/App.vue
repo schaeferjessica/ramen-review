@@ -37,6 +37,9 @@ export default {
 body {
   margin: 0;
   font-size: 20px;
+  background: linear-gradient(180deg, #e3ddcd 31.69%, #ffffff 100%);
+  background-repeat: none;
+  min-height: 100vh;
 }
 
 a,
@@ -61,6 +64,7 @@ ul {
 .footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-left: 5%;
   padding-right: 5%;
   margin-top: 20px;

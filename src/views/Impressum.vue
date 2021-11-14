@@ -3,10 +3,8 @@
     <p class="impressum__paragraph">Impressum</p>
     <p>
       Informationspflicht laut § 5 TMG. <br />Jessica Schäfer
-      <br />Forckenbeckstraße 97, 14199 Berlin, Deutschland <br />E-Mail:<a
-        href="mailto:jessicaschaefer@mail.com"
-        >jessicaschaefer@mail.com</a
-      >
+      <br />Forckenbeckstraße 97, 14199 Berlin, Deutschland <br />E-Mail:
+      <a href="mailto:jessicaschaefer@mail.com"> jessicaschaefer@mail.com</a>
     </p>
 
     <p class="impressum__paragraph">EU-Streitschlichtung:</p>
