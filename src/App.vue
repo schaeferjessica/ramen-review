@@ -17,11 +17,11 @@ export default {
 
 <style>
 .vue-app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Krub', sans-serif, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: black;
+  color: #3d3832;
 }
 
 * {
@@ -34,7 +34,7 @@ body {
 
 a,
 a:visited {
-  color: black;
+  color: #3d3832;
   text-decoration: none;
 }
 

@@ -4,9 +4,7 @@
       <img class="ramen__image" :src="imageUrl" :alt="ramen.name" />
     </router-link>
     <div class="ramen__context">
-      <span
-        ><strong>{{ ramen.name }}</strong></span
-      >
+      <span>{{ ramen.name }}</span>
       <span>flavour: {{ ramen.flavour }}</span>
       <span>noodels: {{ ramen.noodels }}</span>
       <span>soupe: {{ ramen.soupe }}</span>
