@@ -126,8 +126,8 @@
 
 <style scoped>
 .impressum {
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .impressum__paragraph {
   margin-top: 50px;
