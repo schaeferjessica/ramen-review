@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div id="nav" class="navigation">
     <div id="flashMessage" v-if="GlobalStore.flashMessage">
       {{ GlobalStore.flashMessage }}
     </div>
@@ -24,10 +24,22 @@ export default {
   color: black;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
 a,
 a:visited {
   color: black;
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 @keyframes yellowfade {
@@ -37,6 +49,10 @@ a:visited {
   to {
     background: transparent;
   }
+}
+
+.navigation {
+  text-align: right;
 }
 
 #flashMessage {

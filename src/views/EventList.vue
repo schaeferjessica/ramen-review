@@ -1,7 +1,8 @@
 <template>
-  <div class="events">
-    <h1>This is an event page</h1>
-    <EventCard v-for="ramen in ramens" :key="ramen.id" :ramen="ramen" />
+  <div class="ramen">
+    <ul class="ramen__grid">
+      <EventCard v-for="ramen in ramens" :key="ramen.id" :ramen="ramen" />
+    </ul>
   </div>
 </template>
 
@@ -35,3 +36,17 @@ export default {
   },
 }
 </script>
+<style scoped>
+.ramen__grid {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-row-gap: 3%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 0;
+  padding: 0;
+  grid-column-gap: 10%;
+  margin: 0;
+  padding: 0;
+}
+</style>

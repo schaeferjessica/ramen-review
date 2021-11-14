@@ -1,15 +1,19 @@
 <template>
-  <router-link :to="{ name: 'RamenDetails', params: { id: ramen.id } }">
-    <div class="ramen-grid">
-      <img :src="ramen.url" :alt="ramen.name" />
-      <span>{{ ramen.name }}</span>
+  <li class="ramen__list">
+    <router-link :to="{ name: 'RamenDetails', params: { id: ramen.id } }">
+      <img class="ramen__image" :src="imageUrl" :alt="ramen.name" />
+    </router-link>
+    <div class="ramen__context">
+      <span
+        ><strong>{{ ramen.name }}</strong></span
+      >
       <span>flavour: {{ ramen.flavour }}</span>
       <span>noodels: {{ ramen.noodels }}</span>
       <span>soupe: {{ ramen.soupe }}</span>
       <span>spice: {{ ramen.spice }}</span>
-      <p>comment: {{ ramen.comment }}</p>
+      <span>comment: {{ ramen.comment }}</span>
     </div>
-  </router-link>
+  </li>
 </template>
 
 <script>
@@ -18,13 +22,20 @@ export default {
   props: {
     ramen: Object,
   },
+  computed: {
+    imageUrl: function () {
+      return `https://raw.githubusercontent.com/schaeferjessica/vue-mastery/master/src/assets/images${this.ramen.url}.jpg`
+    },
+  },
 }
 </script>
 
 <style scoped>
-.ramen-grid {
-  display: grid;
-  grid-auto-flow: row dense;
-  gap: 10%;
+.ramen__image {
+  width: 100%;
+}
+.ramen__context > span {
+  display: block;
+  text-align: left;
 }
 </style>
