@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import About from '@/views/About.vue'
-import EventList from '@/views/EventList.vue'
+import RamenList from '@/views/RamenList.vue'
 import EventLayout from '@/views/ramen/Layout.vue'
 import RamenDetails from '@/views/ramen/Details.vue'
 import EventRegister from '@/views/ramen/Register.vue'
@@ -11,8 +11,8 @@ import NetworkError from '@/views/NetworkError.vue'
 const routes = [
   {
     path: '/',
-    name: 'EventList',
-    component: EventList,
+    name: 'RamenList',
+    component: RamenList,
   },
   {
     path: '/redirectroutes/:id',

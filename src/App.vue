@@ -3,7 +3,7 @@
     <div id="flashMessage" v-if="GlobalStore.flashMessage">
       {{ GlobalStore.flashMessage }}
     </div>
-    <router-link :to="{ name: 'EventList' }">EventList</router-link> |
+    <router-link :to="{ name: 'RamenList' }">RamenList</router-link> |
     <router-link :to="{ name: 'About' }">About</router-link>
   </div>
   <router-view />

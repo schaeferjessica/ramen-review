@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import EventService from '@/services/EventService.js'
+import RamenService from '@/services/RamenService.js'
 
 export default {
   props: ['id'],
@@ -23,7 +23,7 @@ export default {
     }
   },
   created() {
-    EventService.getEvent(this.id)
+    RamenService.getEvent(this.id)
       .then((response) => {
         this.ramen = response.data
       })

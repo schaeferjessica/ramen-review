@@ -11,26 +11,30 @@
       <span>noodels: {{ ramen.noodels }}</span>
       <span>soupe: {{ ramen.soupe }}</span>
       <span>spice: {{ ramen.spice }}</span>
-      <span>comment: {{ ramen.comment }}</span>
+      <span v-if="ramen.comment">comment: {{ ramen.comment }}</span>
     </div>
   </li>
 </template>
 
 <script>
 export default {
-  name: 'EventCard',
+  name: 'RamenPack',
   props: {
     ramen: Object,
   },
   computed: {
     imageUrl: function () {
-      return `https://raw.githubusercontent.com/schaeferjessica/vue-mastery/master/src/assets/images${this.ramen.url}.jpg`
+      return `https://raw.githubusercontent.com/schaeferjessica/vue-mastery/master/src/assets/images/${this.ramen.image}.jpg`
     },
   },
 }
 </script>
 
 <style scoped>
+.ramen__list {
+  display: flex;
+  flex-direction: column;
+}
 .ramen__image {
   width: 100%;
 }

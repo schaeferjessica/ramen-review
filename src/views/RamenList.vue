@@ -1,21 +1,21 @@
 <template>
   <div class="ramen">
     <ul class="ramen__grid">
-      <EventCard v-for="ramen in ramens" :key="ramen.id" :ramen="ramen" />
+      <RamenPack v-for="ramen in ramens" :key="ramen.id" :ramen="ramen" />
     </ul>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import EventCard from '@/components/EventCard.vue'
-import EventService from '@/services/EventService.js'
+import RamenPack from '@/components/RamenPack.vue'
+import RamenService from '@/services/RamenService.js'
 import { watchEffect } from 'vue'
 
 export default {
-  name: 'EventList',
+  name: 'RamenList',
   components: {
-    EventCard,
+    RamenPack,
   },
   data() {
     return {
@@ -25,7 +25,7 @@ export default {
   created() {
     watchEffect(() => {
       this.events = null
-      EventService.getEvents()
+      RamenService.getEvents()
         .then((response) => {
           this.ramens = response.data
         })
@@ -41,10 +41,8 @@ export default {
   display: grid;
   grid-auto-flow: dense;
   grid-row-gap: 3%;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, 1fr);
-  margin: 0;
-  padding: 0;
   grid-column-gap: 10%;
   margin: 0;
   padding: 0;
