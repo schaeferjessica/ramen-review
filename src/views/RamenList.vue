@@ -27,12 +27,21 @@ export default {
       this.events = null
       RamenService.getEvents()
         .then((response) => {
-          this.ramens = response.data
+          this.ramens = this.sortByRating(response.data).reverse()
         })
         .catch(() => {
           this.$router.push({ name: 'NetworkError' })
         })
     })
+  },
+  methods: {
+    sortByRating(ramenArray) {
+      return ramenArray.sort(function (opjectA, opjectB) {
+        const ratingA = +opjectA.noodels + opjectA.soupe
+        const ratingB = +opjectB.noodels + opjectB.soupe
+        return ratingA - ratingB
+      })
+    },
   },
 }
 </script>
