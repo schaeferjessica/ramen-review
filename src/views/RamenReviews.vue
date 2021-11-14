@@ -69,4 +69,16 @@ export default {
   padding-left: 5%;
   padding-right: 5%;
 }
+
+@media only screen and (max-width: 1100px) {
+  .ramen__grid {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .ramen__grid {
+    grid-template-columns: repeat(1, auto);
+  }
+}
 </style>

@@ -68,5 +68,17 @@ ul {
   padding-left: 5%;
   padding-right: 5%;
   margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 </style>

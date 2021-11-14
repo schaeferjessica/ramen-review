@@ -40,8 +40,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 </style>

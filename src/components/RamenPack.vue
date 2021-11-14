@@ -44,6 +44,10 @@ export default {
 .ramen__context > span {
   display: block;
   text-align: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+  width: 100%;
 }
 .ramen__context > small {
   margin-top: 5px;

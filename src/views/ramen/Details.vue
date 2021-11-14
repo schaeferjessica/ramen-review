@@ -12,9 +12,3 @@ export default {
   },
 }
 </script>
-<style scoped>
-.ramen__image {
-  width: 80%;
-  height: auto;
-}
-</style>
