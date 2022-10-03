@@ -8,8 +8,8 @@
   <footer class="footer">
     <p>
       Ramen Reviews by
-      <a href="https://jessica.gatsbyjs.io/" target="_blanck"
-        >Jessica Schäfer</a
+      <a href="https://developerhub.tech/" target="_blank"
+        >developer:hub</a
       >
     </p>
     <router-link :to="{ name: 'Impressum' }">Impressum</router-link>

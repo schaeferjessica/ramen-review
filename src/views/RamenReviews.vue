@@ -1,11 +1,11 @@
 <template>
-  <header class="header">
+  <!-- <header class="header">
     <img
       class="header__image"
       src="../assets/background-images/daruma.jpg"
       alt="daruma illustration"
     />
-  </header>
+  </header> -->
   <div class="ramen">
     <ul class="ramen__grid">
       <RamenPack v-for="ramen in ramens" :key="ramen.id" :ramen="ramen" />
@@ -60,6 +60,7 @@ export default {
   height: 100vh;
 }
 .ramen__grid {
+  margin-top: 5%;
   display: grid;
   grid-auto-flow: dense;
   grid-row-gap: 50px;
